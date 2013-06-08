@@ -12,7 +12,7 @@ public interface CombinatorialProblem {
 
     public double evaluate(boolean[] solution);
 
-    public <S extends Number> S decode(boolean[] solution);
+    public <S> S decode(boolean[] solution);
 
     public boolean[] randomSolution();
 }
