@@ -37,7 +37,7 @@ public class TabuSearch {
         while ((i < maxIterations) &&!converged) {
             y = getBestNeighbour(bestSolution, neighbours);
 
-            if (problem.evaluate(bestSolution) < problem.evaluate(y)) {
+            if (problem.evaluate(bestSolution).doubleValue() > problem.evaluate(y).doubleValue()) {
                 bestSolution = y;
             } else {
                 converged = !converged;
@@ -51,7 +51,7 @@ public class TabuSearch {
         boolean[] best = x;
 
         for (boolean[] y : neighbours) {
-            if (problem.evaluate(best) < problem.evaluate(y)) {
+            if (problem.evaluate(best).doubleValue() < problem.evaluate(y).doubleValue()) {
                 best = y;
             }
         }
@@ -59,7 +59,7 @@ public class TabuSearch {
         return best;
     }
 
-    public double bestSolutionValue() {
+    public Number bestSolutionValue() {
         return problem.evaluate(bestSolution);
     }
 

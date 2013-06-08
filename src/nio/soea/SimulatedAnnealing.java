@@ -9,7 +9,6 @@ import problems.discrete.CombinatorialProblem;
 import java.util.List;
 import java.util.Random;
 
-
 public class SimulatedAnnealing {
     private boolean[]            bestSolution;
     private int                  maxIterations;
@@ -30,23 +29,24 @@ public class SimulatedAnnealing {
         bestSolution = problem.randomSolution();
         initT();
         initα();
-
+        System.out.println("T* = " + T);
+        System.out.println("α  = " + α);
         List<boolean[]> neighbours = problem.getNeighbours(bestSolution);
         Random          r          = new Random();
         int             i          = 0;
         boolean[]       y;
 
         while ((i < maxIterations)) {
+
             y = neighbours.get(r.nextInt(neighbours.size()));
 
-            if (problem.evaluate(bestSolution) >= problem.evaluate(y)) {
+            if (problem.evaluate(bestSolution).doubleValue() > problem.evaluate(y).doubleValue()) {
                 bestSolution = y;
             } else {
 
                 // accept the solution with a certain probability
-                double prob = Math.exp(-(problem.evaluate(y) - problem.evaluate(bestSolution)) / T);
-
-                if (prob > 0.5) {
+                double prob = Math.exp(-(problem.evaluate(y).doubleValue() - problem.evaluate(bestSolution).doubleValue()) / T);
+                if (prob >= 0.5) {
                     bestSolution = y;
                 }
             }
@@ -58,8 +58,8 @@ public class SimulatedAnnealing {
 
     private void initT() {
         boolean[] y = getWorstNeighbour();
-
-        Δ = problem.evaluate(y) - problem.evaluate(bestSolution);
+        Δ = problem.evaluate(y).doubleValue() - problem.evaluate(bestSolution).doubleValue();
+        System.out.println("Δ = " + Δ);
         T = Δ / Math.log(2);
     }
 
@@ -69,7 +69,7 @@ public class SimulatedAnnealing {
 
         // get the worst neighbour
         for (boolean[] neighbour : neighbours) {
-            if (problem.evaluate(neighbour) > problem.evaluate(y)) {
+            if (problem.evaluate(neighbour).doubleValue() > problem.evaluate(y).doubleValue()) {
                 y = neighbour;
             }
         }
@@ -78,10 +78,10 @@ public class SimulatedAnnealing {
     }
 
     private void initα() {
-        α = Math.pow((Math.log(2) / Math.log(1 / δ)), (1 / maxIterations));
+        α = Math.pow(Δ/(T * Math.log(1/δ)), (1.0 / maxIterations));
     }
 
-    public double bestSolutionValue() {
+    public Number bestSolutionValue() {
         return problem.evaluate(bestSolution);
     }
 

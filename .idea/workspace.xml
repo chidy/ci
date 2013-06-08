@@ -2,26 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" name="Default" comment="Add more matrix arithmetic">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/problems/discrete/AbstractSubsetProblem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/problems/discrete/ClosestString.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Experiment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/problems/discrete/Knapsack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/problems/discrete/MaximumCut.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/problems/discrete/SetCover.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/problems/discrete/TravellingSalesman.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/problems/discrete/CombinatorialProblem.java" afterPath="$PROJECT_DIR$/src/problems/discrete/CombinatorialProblem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nn/util/Matrix.java" afterPath="$PROJECT_DIR$/src/nn/util/Matrix.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nio/soea/NextDescent.java" afterPath="$PROJECT_DIR$/src/nio/soea/NextDescent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nio/soea/SimulatedAnnealing.java" afterPath="$PROJECT_DIR$/src/nio/soea/SimulatedAnnealing.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nio/soea/SteepestDescent.java" afterPath="$PROJECT_DIR$/src/nio/soea/SteepestDescent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/problems/discrete/SubsetSum.java" afterPath="$PROJECT_DIR$/src/problems/discrete/SubsetSum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nio/soea/TabuSearch.java" afterPath="$PROJECT_DIR$/src/nio/soea/TabuSearch.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ci.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370377510618" ignored="false" />
     <file path="/ActivationFunction.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370299014068" ignored="false" />
-    <file path="/Matrix.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370699412314" ignored="false" />
+    <file path="/Matrix.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370707123623" ignored="false" />
     <file path="/DiscreteProblem.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370374907152" ignored="false" />
-    <file path="/SubsetSum.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370382610504" ignored="false" />
+    <file path="/SubsetSum.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370712420580" ignored="false" />
     <file path="/Representation.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370374267802" ignored="false" />
-    <file path="/CombinatorialProblem.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370703739319" ignored="false" />
-    <file path="/SteepestDescent.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370380303848" ignored="false" />
-    <file path="/NextDescent.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370380446723" ignored="false" />
-    <file path="/TabuSearch.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370700085359" ignored="false" />
+    <file path="/CombinatorialProblem.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370712391427" ignored="false" />
+    <file path="/SteepestDescent.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370718473402" ignored="false" />
+    <file path="/NextDescent.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370712490003" ignored="false" />
+    <file path="/TabuSearch.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370712549895" ignored="false" />
     <file path="/Dummy.txt" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370699586351" ignored="false" />
-    <file path="/SimulatedAnnealing.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370705066928" ignored="false" />
+    <file path="/SimulatedAnnealing.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370717086271" ignored="false" />
+    <file path="/SetCover.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370712601953" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/optimisation/ConjugateGradient.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709353677" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/optimisation/ScaledConjugateGradient.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709353677" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/model/recurrent/Elman.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709354234" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/optimisation/BPTT.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709354234" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/optimisation/GradientDescent.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709354234" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/optimisation/QuasiNewton.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709354234" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/model/recurrent/EchoState.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709354234" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/model/recurrent/Hopfield.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709354234" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/model/mlp/Mlp.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709354242" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/util/ActivationFunctions.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709354242" ignored="false" />
+    <file path="$PROJECT_DIR$/src/nn/util/CostFunction.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709354697" ignored="false" />
+    <file path="/AbstractSetProblem.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370709628901" ignored="false" />
+    <file path="/Knapsack.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370710354844" ignored="false" />
+    <file path="/Experiment.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370718943370" ignored="false" />
+    <file path="/AbstractSubsetProblem.java" changelist="e5c2bea1-3aa3-4c21-86dd-2bcd9ae0fb11" time="1370712402435" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +55,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -73,6 +104,23 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/problems/discrete/AbstractSubsetProblem.java" line="17" class="problems.discrete.AbstractSubsetProblem" package="problems.discrete">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -85,8 +133,37 @@
       <file leaf-file-name="TabuSearch.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nio/soea/TabuSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="37" selection-start="1639" selection-end="1639" vertical-scroll-proportion="0.0">
+            <state line="39" column="96" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NextDescent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nio/soea/NextDescent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="43" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SteepestDescent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/nio/soea/SteepestDescent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="21" selection-start="1836" selection-end="1836" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SetCover.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problems/discrete/SetCover.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="33" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,7 +171,7 @@
       <file leaf-file-name="Matrix.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nn/util/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="53" selection-start="3790" selection-end="3790" vertical-scroll-proportion="0.0">
+            <state line="9" column="49" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Matrix#0;class#Matrix#0" expanded="false" />
@@ -129,25 +206,48 @@
                 <element signature="method#columnLength#0;class#Matrix#0" expanded="false" />
                 <element signature="method#toArray#0;class#Matrix#0" expanded="false" />
                 <element signature="method#vectorise#0;class#Matrix#0" expanded="false" />
-                <element signature="method#toString#0;class#Matrix#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Representation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/problems/Representation.java">
+      <file leaf-file-name="Experiment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Experiment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="34" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="23" column="46" selection-start="655" selection-end="655" vertical-scroll-proportion="0.26546392">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimulatedAnnealing.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AbstractSubsetProblem.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problems/discrete/AbstractSubsetProblem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="45" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubsetSum.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/problems/discrete/SubsetSum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#719#727#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimulatedAnnealing.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nio/soea/SimulatedAnnealing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="48" selection-start="495" selection-end="495" vertical-scroll-proportion="-2.1007752">
+            <state line="13" column="44" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,25 +258,7 @@
       <file leaf-file-name="CombinatorialProblem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/problems/discrete/CombinatorialProblem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="17" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NextDescent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nio/soea/NextDescent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="48" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SteepestDescent.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/nio/soea/SteepestDescent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="48" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.0">
+            <state line="14" column="17" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -200,22 +282,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/nn/util/ActivationFunctions.java" />
-        <option value="$PROJECT_DIR$/src/problems/discrete/DiscreteProblem.java" />
-        <option value="$PROJECT_DIR$/src/problems/Representation.java" />
-        <option value="$PROJECT_DIR$/src/evolutionary/soea/NextDescent.java" />
-        <option value="$PROJECT_DIR$/src/evolutionary/soea/SteepestDescent.java" />
         <option value="$PROJECT_DIR$/src/evolutionary/soea/ACO.java" />
         <option value="$PROJECT_DIR$/src/evolutionary/soea/GA.java" />
         <option value="$PROJECT_DIR$/src/evolutionary/soea/SteadyStateGA.java" />
         <option value="$PROJECT_DIR$/src/evolutionary/soea/TabuSearch.java" />
-        <option value="$PROJECT_DIR$/src/problems/discrete/SubsetSum.java" />
         <option value="$PROJECT_DIR$/src/nn/util/Matrix.java" />
-        <option value="$PROJECT_DIR$/src/nio/soea/TabuSearch.java" />
+        <option value="$PROJECT_DIR$/src/problems/discrete/AbstractSetProblem.java" />
+        <option value="$PROJECT_DIR$/src/problems/discrete/Knapsack.java" />
         <option value="$PROJECT_DIR$/src/problems/discrete/CombinatorialProblem.java" />
+        <option value="$PROJECT_DIR$/src/problems/discrete/AbstractSubsetProblem.java" />
+        <option value="$PROJECT_DIR$/src/problems/discrete/SubsetSum.java" />
         <option value="$PROJECT_DIR$/src/nio/soea/NextDescent.java" />
-        <option value="$PROJECT_DIR$/src/nio/soea/SteepestDescent.java" />
+        <option value="$PROJECT_DIR$/src/nio/soea/TabuSearch.java" />
+        <option value="$PROJECT_DIR$/src/problems/discrete/SetCover.java" />
         <option value="$PROJECT_DIR$/src/nio/soea/SimulatedAnnealing.java" />
+        <option value="$PROJECT_DIR$/src/nio/soea/SteepestDescent.java" />
+        <option value="$PROJECT_DIR$/src/sample/Experiment.java" />
       </list>
     </option>
   </component>
@@ -231,7 +313,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -296,6 +378,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="problems" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -314,85 +414,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="nn" />
+              <option name="myItemId" value="problems" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="optimisation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recurrent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ci" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mlp" />
+              <option name="myItemId" value="discrete" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -448,10 +474,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -460,10 +487,33 @@
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Experiment">
+    <configuration default="false" name="Experiment" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sample.Experiment" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ci" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -552,7 +602,14 @@
       <patterns />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Experiment" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Experiment" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -598,17 +655,17 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Jindent" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39908257" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33027524" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33027524" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.66972476" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878444" sideWeight="0.6712538" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874617" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -682,72 +739,44 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/nn/model/recurrent/EchoState.java">
+    <entry file="file://$PROJECT_DIR$/src/problems/Representation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
+        <state line="16" column="34" selection-start="364" selection-end="364" vertical-scroll-proportion="0.58536583">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nn/model/recurrent/Hopfield.java">
+    <entry file="file://$PROJECT_DIR$/src/problems/discrete/Knapsack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+        <state line="7" column="21" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nn/model/recurrent/Elman.java">
+    <entry file="file://$PROJECT_DIR$/src/problems/discrete/MaximumCut.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+        <state line="7" column="23" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nn/optimisation/BPTT.java">
+    <entry file="file://$PROJECT_DIR$/src/problems/discrete/ClosestString.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+        <state line="7" column="92" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nio/moea/NSGAII.java">
+    <entry file="file://$PROJECT_DIR$/src/problems/discrete/TravellingSalesman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nio/soea/ACO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nio/soea/SteadyStateGA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/problems/discrete/SubsetSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="58" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Object.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="539" selection-end="539" vertical-scroll-proportion="0.42993632">
+        <state line="8" column="12" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nn/util/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="53" selection-start="3790" selection-end="3790" vertical-scroll-proportion="0.0">
+        <state line="9" column="49" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Matrix#0;class#Matrix#0" expanded="false" />
@@ -782,49 +811,84 @@
             <element signature="method#columnLength#0;class#Matrix#0" expanded="false" />
             <element signature="method#toArray#0;class#Matrix#0" expanded="false" />
             <element signature="method#vectorise#0;class#Matrix#0" expanded="false" />
-            <element signature="method#toString#0;class#Matrix#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nio/soea/TabuSearch.java">
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/Arrays.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="37" selection-start="1639" selection-end="1639" vertical-scroll-proportion="0.0">
+        <state line="241" column="28" selection-start="10793" selection-end="10793" vertical-scroll-proportion="0.331307">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problems/discrete/CombinatorialProblem.java">
+    <entry file="file://$PROJECT_DIR$/src/problems/discrete/AbstractSubsetProblem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="41" column="45" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nio/soea/NextDescent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="48" selection-start="1178" selection-end="1178" vertical-scroll-proportion="0.0">
+        <state line="42" column="43" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/nio/soea/SteepestDescent.java">
+    <entry file="file://$PROJECT_DIR$/src/nio/soea/TabuSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="48" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.0">
+        <state line="39" column="96" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/problems/Representation.java">
+    <entry file="file://$PROJECT_DIR$/src/problems/discrete/SetCover.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
+        <state line="17" column="33" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problems/discrete/CombinatorialProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/nio/soea/SimulatedAnnealing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="48" selection-start="495" selection-end="495" vertical-scroll-proportion="-2.1007752">
+        <state line="13" column="44" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/problems/discrete/SubsetSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#719#727#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nio/soea/SteepestDescent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="21" selection-start="1836" selection-end="1836" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Experiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="46" selection-start="655" selection-end="655" vertical-scroll-proportion="0.26546392">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -888,7 +952,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

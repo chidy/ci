@@ -3,66 +3,33 @@ package problems.discrete;
 //~--- JDK imports ------------------------------------------------------------
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
-public class SubsetSum implements CombinatorialProblem {
-    private int[] problem;
+public class SubsetSum extends AbstractSubsetProblem {
+    private Number[] problem;
 
-    public SubsetSum(int[] problem) {
+    public SubsetSum(Number[] problem) {
         this.problem = problem;
     }
 
-    @Override
-    public List<boolean[]> getNeighbours(boolean[] solution) {
-        List<boolean[]> neighbours = new ArrayList<boolean[]>();
 
-        for (int i = 0; i < solution.length; i++) {
-            boolean[] neighbour;
-
-            neighbour    = Arrays.copyOf(solution, 0);
-            neighbour[i] = !neighbour[i];
-            neighbours.add(neighbour);
-        }
-
-        return neighbours;
-    }
 
     @Override
-    public List<boolean[]> getNeighbours(boolean[] solution, Set<Integer> tabuList) {
-        List<boolean[]> neighbours = new ArrayList<boolean[]>();
-
-        for (int i = 0; i < solution.length; i++) {
-            boolean[] neighbour;
-
-            neighbour = Arrays.copyOf(solution, 0);
-
-            if (!tabuList.contains(i)) {
-                neighbour[i] = !neighbour[i];
-                neighbours.add(neighbour);
-            }
-        }
-
-        return neighbours;
-    }
-
-    @Override
-    public double evaluate(boolean[] aSolution) {
+    public Integer evaluate(boolean[] aSolution) {
         int sum = 0;
 
         for (int i = 0; i < aSolution.length; i++) {
             if (aSolution[i]) {
-                sum += problem[i];
+                sum += problem[i].intValue();
             }
         }
 
-        return sum;
+        return Math.abs(sum);
     }
 
     @Override
-    public List<Integer> decode(boolean[] solution) {
-        List<Integer> result = new ArrayList<Integer>();
+    public List<Number> decode(boolean[] solution) {
+        List<Number> result = new ArrayList<Number>();
 
         for (int i = 0; i < solution.length; i++) {
             if (solution[i]) {
@@ -85,4 +52,5 @@ public class SubsetSum implements CombinatorialProblem {
 
         return randomSolution;
     }
+
 }

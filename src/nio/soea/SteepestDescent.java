@@ -35,13 +35,13 @@ public class SteepestDescent {
         while ((i < maxIterations) &&!converged) {
             y = getBestNeighbour(bestSolution, neighbours);
 
-            if (problem.evaluate(bestSolution) > problem.evaluate(y)) {
+            if (problem.evaluate(bestSolution).doubleValue() > problem.evaluate(y).doubleValue()) {
                 bestSolution = y;
             } else {
                 converged = !converged;
             }
 
-            i++;
+            i += neighbours.size();
         }
     }
 
@@ -49,7 +49,7 @@ public class SteepestDescent {
         boolean[] best = x;
 
         for (boolean[] y : neighbours) {
-            if (problem.evaluate(best) < problem.evaluate(y)) {
+            if (problem.evaluate(best).doubleValue() > problem.evaluate(y).doubleValue()) {
                 best = y;
             }
         }
@@ -57,7 +57,7 @@ public class SteepestDescent {
         return best;
     }
 
-    public double bestSolutionValue() {
+    public Number bestSolutionValue() {
         return problem.evaluate(bestSolution);
     }
 

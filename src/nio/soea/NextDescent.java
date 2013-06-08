@@ -25,16 +25,17 @@ public class NextDescent {
 
     public void optimise() {
         bestSolution = problem.randomSolution();
-        List<boolean[]> neighbours   = problem.getNeighbours(bestSolution);
-        Random          r            = new Random();
-        int             i            = 0;
+
+        List<boolean[]> neighbours = problem.getNeighbours(bestSolution);
+        Random          r          = new Random();
+        int             i          = 0;
         boolean[]       y;
         boolean         converged = false;
 
         while ((i < maxIterations) &&!converged) {
             y = neighbours.get(r.nextInt(neighbours.size()));
 
-            if (problem.evaluate(bestSolution) > problem.evaluate(y)) {
+            if (problem.evaluate(bestSolution).doubleValue() > problem.evaluate(y).doubleValue()) {
                 bestSolution = y;
             } else {
                 converged = !converged;
@@ -44,7 +45,7 @@ public class NextDescent {
         }
     }
 
-    public double bestSolutionValue() {
+    public Number bestSolutionValue() {
         return problem.evaluate(bestSolution);
     }
 

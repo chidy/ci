@@ -315,7 +315,7 @@ public class Matrix implements Serializable {
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {

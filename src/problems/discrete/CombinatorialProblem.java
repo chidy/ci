@@ -10,7 +10,7 @@ public interface CombinatorialProblem {
 
     public List<boolean[]> getNeighbours(boolean[] solution, Set<Integer> tabuList);
 
-    public double evaluate(boolean[] solution);
+    public Number evaluate(boolean[] solution);
 
     public <S> S decode(boolean[] solution);
 
