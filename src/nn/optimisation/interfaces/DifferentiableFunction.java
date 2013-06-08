@@ -2,7 +2,7 @@ package nn.optimisation.interfaces;
 
 //~--- non-JDK imports --------------------------------------------------------
 
-import nn.util.Matrix;
+import nn.common.Matrix;
 
 /**
  * Created with IntelliJ IDEA.

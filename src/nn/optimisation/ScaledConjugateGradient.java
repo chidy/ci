@@ -6,7 +6,7 @@ import nn.model.mlp.Network;
 
 import nn.optimisation.interfaces.DifferentiableFunction;
 
-import nn.util.Matrix;
+import nn.common.Matrix;
 
 //~--- JDK imports ------------------------------------------------------------
 
@@ -40,10 +40,7 @@ public class ScaledConjugateGradient {
     private double                 error;
     private int                    iter;
 
-    /**
-     * Constructor for the <code>ScaledConjugateGradient</code> class
-     * @param net a differentiable function
-     */
+
     public ScaledConjugateGradient(DifferentiableFunction net) {
         this.net = net;
         errorLog = new ArrayList<Double>();
@@ -62,9 +59,7 @@ public class ScaledConjugateGradient {
         nparams  = weights.length;
     }
 
-    /**
-     * main optimisation loop
-     */
+
     private void optimise() {
         double[][] wt = new double[1][weights.length];
 
@@ -122,9 +117,6 @@ public class ScaledConjugateGradient {
         }
     }
 
-    /**
-     * method to calculate comparison ratio
-     */
     private void calculateComparisonRatio() {
         wNew = w.plus(δw.times(α));
         net.setWeights(wNew.vectorise());
@@ -142,10 +134,7 @@ public class ScaledConjugateGradient {
         }
     }
 
-    /**
-     * method to increase effective curvature
-     * for approximation of the inverse Hessian
-     */
+
     private void increaseEffectiveCurvature() {
         δ = θ + β * κ;
 
@@ -171,12 +160,6 @@ public class ScaledConjugateGradient {
         }
     }
 
-    /**
-     * Feed forward method for the function
-     * to be used after optimisation
-     * @param input
-     * @return output from the function
-     */
     public Matrix feedForward(Matrix input) {
         return getNetwork().feedForward(input);
     }
@@ -185,12 +168,7 @@ public class ScaledConjugateGradient {
         return (Network) net;
     }
 
-    /**
-     * Method for training the network
-     * @param input the inputs
-     * @param target targets
-     * @param maxIters the maximum number of iterations
-     */
+
     public void train(Matrix input, Matrix target, int maxIters) {
         this.input    = input;
         this.target   = target;
@@ -199,10 +177,6 @@ public class ScaledConjugateGradient {
         optimise();
     }
 
-    /**
-     * Getter method for error log
-     * @return errorLog
-     */
     public ArrayList<Double> getErrorLog() {
         return errorLog;
     }

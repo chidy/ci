@@ -9,9 +9,9 @@ package nn.model.mlp;
 
 import nn.model.Net;
 
-import nn.util.Activation;
-import nn.util.Matrix;
-import nn.util.OutputFunction;
+import nn.common.Activation;
+import nn.common.Matrix;
+import nn.common.OutputFunction;
 
 /**
  *

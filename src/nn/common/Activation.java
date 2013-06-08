@@ -3,10 +3,10 @@
 * To change this template, choose Tools | Templates
 * and open the template in the editor.
  */
-package nn.util;
+package nn.common;
 
 /**
  *
- * @author chidimuorah
+ * @author Chidi
  */
-public enum Cost { SSE, CE, MSE, RMSE }
+public enum Activation { LINEAR, SIGMOID, SOFTMAX, GAUSSIAN }

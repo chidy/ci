@@ -11,9 +11,9 @@ import nn.model.Net;
 
 import nn.optimisation.interfaces.DifferentiableFunction;
 
-import nn.util.Activation;
-import nn.util.Matrix;
-import nn.util.Stat;
+import nn.common.Activation;
+import nn.common.Matrix;
+import nn.common.Stat;
 
 /**
  *

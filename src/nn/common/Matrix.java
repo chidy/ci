@@ -3,7 +3,7 @@
 * To change this template, choose Tools | Templates
 * and open the template in the editor.
  */
-package nn.util;
+package nn.common;
 
 //~--- JDK imports ------------------------------------------------------------
 
@@ -21,10 +21,7 @@ public class Matrix implements Serializable {
     private final int  column;
     private double[][] data;
 
-    /**
-     * Constructor to create an instance of a <code>Matrix</code> object
-     * @param data data
-     */
+
     public Matrix(double[][] data) {
         row       = data.length;
         column    = data[0].length;
@@ -39,23 +36,13 @@ public class Matrix implements Serializable {
         this(a.data);
     }
 
-    /**
-     * Constructor to create an instance of a <code>Matrix</code> object
-     * @param row number of rows
-     * @param column number of columns
-     */
     public Matrix(int row, int column) {
         this.row    = row;
         this.column = column;
         data        = new double[row][column];
     }
 
-    /**
-     * Generates a matrix of 0s
-     * @param row row length
-     * @param column column length
-     * @return matrix of zeros
-     */
+
     public static Matrix zeros(int row, int column) {
         Matrix x = new Matrix(row, column);
 
@@ -68,22 +55,12 @@ public class Matrix implements Serializable {
         return x;
     }
 
-    /**
-     * Setter for an element in a matrix
-     * @param m row
-     * @param n column
-     * @param val value
-     */
+
     public void set(int m, int n, double val) {
         data[m][n] = val;
     }
 
-    /**
-     * Generates a matrix of 1s
-     * @param row
-     * @param column
-     * @return matrix of ones
-     */
+
     public static Matrix ones(int row, int column) {
         Matrix result = new Matrix(row, column);
 
@@ -96,13 +73,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * Generates a random matrix distributed
-     * according to uniform distribution
-     * @param row
-     * @param column
-     * @return
-     */
+
     public static Matrix random(int row, int column) {
         Matrix result = new Matrix(row, column);
 
@@ -115,11 +86,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * method that gets a column of a matrix
-     * @param n the column
-     * @return column n of the matrix
-     */
+
     public Matrix getColumn(int n) {
         double[][] aColumn = new double[data.length][1];
 
@@ -130,11 +97,7 @@ public class Matrix implements Serializable {
         return new Matrix(aColumn);
     }
 
-    /**
-     * method that concatenates two matrices
-     * @param b the matrix to concatenate
-     * @return this concatenated with b
-     */
+
     public Matrix concat(Matrix b) {
         if (b.rowLength() != rowLength()) {
             throw new RuntimeException("Matrices must have the same dimensions to be concatenated");
@@ -143,21 +106,12 @@ public class Matrix implements Serializable {
         return new Matrix(concatAll(transpose().toArray(), b.transpose().toArray())).transpose();
     }
 
-    /**
-     * method that appends matrix b to the current matrix
-     * @param b the appendant
-     * @return b appended to the current matrix
-     */
+
     public Matrix append(Matrix b) {
         return new Matrix(concatAll(toArray(), b.toArray()));
     }
 
-    /**
-     * concatenates arrays of arbitrary length
-     * @param first first array
-     * @param rest the rest of the arrays
-     * @return first ++ ... ++ rest
-     */
+
     public static double[] concatAll(double[] first, double[]... rest) {
         int totalLength = first.length;
 
@@ -176,11 +130,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * method that gets a row of the current matrix
-     * @param n row to get
-     * @return row n
-     */
+
     public Matrix getRow(int n) {
         double[][] aRow = new double[1][data.length];
 
@@ -189,13 +139,7 @@ public class Matrix implements Serializable {
         return new Matrix(aRow);
     }
 
-    /**
-     * method that gets rows from m to n of the current matrix
-     * ensures that m > n
-     * @param m from row
-     * @param n to row
-     * @return m to n rows
-     */
+
     public Matrix getRows(int m, int n) {
         if (m > n) {
             throw new IllegalArgumentException("m:" + m + " must be less that n:" + n);
@@ -212,21 +156,11 @@ public class Matrix implements Serializable {
         }
     }
 
-    /**
-     * method that gets a row as an array
-     * @param n row to get
-     * @return array containing row n from left to right
-     */
+
     public double[] getRowAsArray(int n) {
         return data[n];
     }
 
-    /**
-     * method that gets columns from m to n of the matrix
-     * @param m from column
-     * @param n to column
-     * @return columns m to n
-     */
     public Matrix getColumns(int m, int n) {
         if (m > n) {
             throw new IllegalArgumentException("arg1 must be less that arg2");
@@ -245,13 +179,7 @@ public class Matrix implements Serializable {
         }
     }
 
-    /**
-     * method that generates a random matrix
-     * distributed according to the normal distribution
-     * @param row number or rows
-     * @param column number of columns
-     * @return random Gaussian matrix
-     */
+
     public static Matrix randomGaussian(int row, int column) {
         Matrix result = new Matrix(row, column);
         Random r      = new Random();
@@ -265,11 +193,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * returns an identity matrix
-     * @param dimension the dimension
-     * @return dimension X dimension identity matrix
-     */
+
     public static Matrix identity(int dimension) {
         Matrix E = new Matrix(dimension, dimension);
 
@@ -280,21 +204,11 @@ public class Matrix implements Serializable {
         return E;
     }
 
-    /**
-     * getter method for an element of the matrix
-     * @param m row
-     * @param n column
-     * @return element at m,n
-     */
     public double get(int m, int n) {
         return data[m][n];
     }
 
-    /**
-     * method that swaps two rows
-     * @param i row to swap
-     * @param j row to swap
-     */
+
     private void swap(int i, int j) {
         double[] temp = data[i];
 
@@ -302,10 +216,7 @@ public class Matrix implements Serializable {
         data[j] = temp;
     }
 
-    /**
-     * Matrix transposition
-     * @return transposed version of the matrix
-     */
+
     public Matrix transpose() {
         Matrix result = new Matrix(column, row);
 
@@ -318,11 +229,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * Matrix addition
-     * @param y y
-     * @return this + y
-     */
+
     public Matrix plus(Matrix y) {
         Matrix x = this;
 
@@ -342,11 +249,6 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * Matrix subtraction
-     * @param y
-     * @return
-     */
     public Matrix minus(Matrix y) {
         Matrix x = this;
 
@@ -366,12 +268,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * Matrix equality
-     * @param y y
-     * @param ε tolerance
-     * @return true if both matrices are equal within the tolerance
-     */
+
     public boolean equals(Matrix y, double ε) {
         Matrix x = this;
 
@@ -390,10 +287,7 @@ public class Matrix implements Serializable {
         return true;
     }
 
-    /**
-     * length of the matrix
-     * @return length
-     */
+
     public int length() {
         int rowLength    = data.length;
         int columnLength = data[0].length;
@@ -404,10 +298,7 @@ public class Matrix implements Serializable {
         return length;
     }
 
-    /**
-     * dimension of the matrix
-     * @return size
-     */
+
     public int[] size() {
         int   rowLength    = data.length;
         int   columnLength = data[0].length;
@@ -416,11 +307,7 @@ public class Matrix implements Serializable {
         return size;
     }
 
-    /**
-     * matrix multiplication
-     * @param y
-     * @return this times y
-     */
+
     public Matrix times(Matrix y) {
         Matrix x = this;
 
@@ -441,20 +328,12 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise division
-     * @param d the divisor
-     * @return matrix with each element divided by d
-     */
+
     public Matrix divide(double d) {
         return times(1 / d);
     }
 
-    /**
-     * element wise multiplication
-     * @param x the coefficient of multiplication
-     * @return matrix with each element multiplied by x
-     */
+
     public Matrix times(double x) {
         Matrix result = new Matrix(row, column);
 
@@ -467,10 +346,6 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise hyperbolic tangent
-     * @return matrix with element-wise tanh
-     */
     public Matrix tanh() {
         Matrix result = new Matrix(row, column);
 
@@ -483,11 +358,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise power
-     * @param power the exponent
-     * @return matrix with each element raised to power of the exponent
-     */
+
     public Matrix power(int power) {
         Matrix result = new Matrix(row, column);
 
@@ -500,10 +371,6 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise reciprocal
-     * @return matrix with each element reciprocated
-     */
     public Matrix reciprocal() {
         Matrix result = new Matrix(row, column);
 
@@ -516,11 +383,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise multiplication
-     * @param y y
-     * @return this element wise multiplied by y
-     */
+
     public Matrix elemwiseTimes(Matrix y) {
         Matrix x = this;
 
@@ -539,11 +402,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise addition
-     * @param y y
-     * @return this plus y element wise
-     */
+
     public Matrix elemwisePlus(Matrix y) {
         Matrix x = this;
 
@@ -562,11 +421,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise subtraction
-     * @param y y
-     * @return (this - y) element wise
-     */
+
     public Matrix elemwiseMinus(Matrix y) {
         Matrix x = this;
 
@@ -585,19 +440,12 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise subtraction
-     * @param x x
-     * @return (this - x)
-     */
+
     public Matrix minus(double x) {
         return plus(-x);
     }
 
-    /**
-     * element wise exponentiation to the negative element
-     * @return e^elem where elem is the element of the matrix
-     */
+
     public Matrix eToNegativeElement() {
         Matrix result = new Matrix(row, column);
 
@@ -610,11 +458,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise addition
-     * @param x x
-     * @return (this + x) element wise
-     */
+
     public Matrix plus(double x) {
         Matrix result = new Matrix(row, column);
 
@@ -627,10 +471,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * element wise natural logarithm
-     * @return ln of each element of the matrix
-     */
+
     public Matrix log() {
         Matrix result = new Matrix(row, column);
 
@@ -643,11 +484,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * Gaussian elimination division
-     * @param rhs rhs
-     * @return this/rhs
-     */
+
     public Matrix divide(Matrix rhs) {
         if ((row != column) || (rhs.row != column) || (rhs.column != 1)) {
             throw new RuntimeException("Illegal matrix dimensions.");
@@ -722,11 +559,7 @@ public class Matrix implements Serializable {
         return column;
     }
 
-    /**
-     * method that gets columns from matrix
-     * @param inDim
-     * @return
-     */
+
     public Matrix getColumns(int[] inDim) {
         Matrix result = null;
 
@@ -739,10 +572,7 @@ public class Matrix implements Serializable {
                : getColumn(inDim[0]);
     }
 
-    /**
-     * toObjectArray method
-     * @return
-     */
+
     public Double[][] toObjectArray() {
         Double[][] result = new Double[data.length][data[0].length];
 
@@ -755,10 +585,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * converts matrix to vector
-     * @return
-     */
+
     public double[] vectorise() {
         double[] result = getColumn(0).transpose().toArray()[0];
 
@@ -789,10 +616,7 @@ public class Matrix implements Serializable {
         return result;
     }
 
-    /**
-     * toString method
-     * @return string representation of the object
-     */
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

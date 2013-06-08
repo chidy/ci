@@ -3,7 +3,7 @@
 * To change this template, choose Tools | Templates
 * and open the template in the editor.
  */
-package nn.util;
+package nn.common;
 
 /**
  * Class for analysing performance of models
@@ -19,11 +19,7 @@ public class Analytics {
     private double   sse;
     private double   rwRMSE;
 
-    /**
-     * Constructor for <code>Analytics</code> class
-     * @param output output
-     * @param target target
-     */
+
     public Analytics(double[] output, double[] target) {
         this.output = output;
         this.target = target;
