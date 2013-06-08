@@ -27,7 +27,6 @@ public class SteepestDescent {
         bestSolution = problem.randomSolution();
 
         List<boolean[]> neighbours = problem.getNeighbours(bestSolution);
-        Random          r          = new Random();
         int             i          = 0;
         boolean[]       y;
         boolean         converged = false;

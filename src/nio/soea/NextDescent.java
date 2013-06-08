@@ -30,15 +30,12 @@ public class NextDescent {
         Random          r          = new Random();
         int             i          = 0;
         boolean[]       y;
-        boolean         converged = false;
 
-        while ((i < maxIterations) &&!converged) {
+        while (i < maxIterations) {
             y = neighbours.get(r.nextInt(neighbours.size()));
 
             if (problem.evaluate(bestSolution).doubleValue() > problem.evaluate(y).doubleValue()) {
                 bestSolution = y;
-            } else {
-                converged = !converged;
             }
 
             i++;

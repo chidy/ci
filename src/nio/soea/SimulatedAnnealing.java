@@ -36,7 +36,7 @@ public class SimulatedAnnealing {
         int             i          = 0;
         boolean[]       y;
 
-        while ((i < maxIterations)) {
+        while (i < maxIterations) {
 
             y = neighbours.get(r.nextInt(neighbours.size()));
 
