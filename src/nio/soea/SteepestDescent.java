@@ -35,7 +35,7 @@ public class SteepestDescent {
         while ((i < maxIterations) &&!converged) {
             y = getBestNeighbour(bestSolution, neighbours);
 
-            if (problem.evaluate(bestSolution) < problem.evaluate(y)) {
+            if (problem.evaluate(bestSolution) > problem.evaluate(y)) {
                 bestSolution = y;
             } else {
                 converged = !converged;
