@@ -1,12 +1,9 @@
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
  */
 package nn.util;
-
-//~--- non-JDK imports --------------------------------------------------------
-
 
 /**
  *
@@ -35,13 +32,15 @@ public class OutputFunction {
 
     public static double[] softmax(double[] x) {
         x = normalise(x);
-        double[] y = new double[x.length];
-        double sum = sumExp(x);
+
+        double[] y   = new double[x.length];
+        double   sum = sumExp(x);
+
         for (int i = 0; i < x.length; i++) {
             y[i] = Math.exp(x[i]) / sum;
         }
-        return y;
 
+        return y;
     }
 
     public static double sigmoidDerivative(double sigmoid) {
@@ -50,9 +49,11 @@ public class OutputFunction {
 
     private static double sumExp(double[] x) {
         double sum = Math.exp(x[0]);
+
         for (int i = 1; i < x.length; i++) {
             sum += Math.exp(x[i]);
         }
+
         return sum;
     }
 
@@ -61,14 +62,17 @@ public class OutputFunction {
     }
 
     private static double[] normalise(double[] x) {
-        double [] y = new double[x.length];
+        double[] y = new double[x.length];
+
         for (int i = 0; i < x.length; i++) {
             y[i] = Math.min(x[i], Double.MAX_EXPONENT);
             y[i] = Math.max(x[i], Double.MIN_EXPONENT);
-            if(y[i]==Double.MIN_EXPONENT){
+
+            if (y[i] == Double.MIN_EXPONENT) {
                 y[i] = y[i] * 2;
             }
         }
+
         return y;
     }
 }

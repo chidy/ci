@@ -1,54 +1,59 @@
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
  */
 package nn.model.mlp;
 
 //~--- non-JDK imports --------------------------------------------------------
 
-//~--- JDK imports ------------------------------------------------------------
-import java.io.Serializable;
 import nn.model.Net;
+
 import nn.util.Activation;
 import nn.util.Matrix;
+
+//~--- JDK imports ------------------------------------------------------------
+
+import java.io.Serializable;
 
 /**
  *
  * @author Chidi
  */
 public abstract class Network implements Serializable {
-
-    private Matrix biasIH, biasHO;
-    private int nin, nhidden, nout, nwts;
-    private Net type;
-    private Matrix weightIH, weightHO;
-    protected double[] output, input, hidden, deltaH, deltaO;
+    private Matrix       biasIH, biasHO;
+    private int          nin, nhidden, nout, nwts;
+    private Net          type;
+    private Matrix       weightIH, weightHO;
+    protected double[]   output, input, hidden, deltaH, deltaO;
     protected Activation outFn;
     protected Activation hiddenFn;
 
     public Network(Net type, int nin, int nhidden, int nout) {
-        this.type = type;
-        this.nin = nin;
+        this.type    = type;
+        this.nin     = nin;
         this.nhidden = nhidden;
-        this.nout = nout;
-        weightIH = Matrix.randomGaussian(nin, nhidden);
-        weightHO = Matrix.randomGaussian(nhidden, nout);
-        nwts = (nin + 1) * nhidden + (nhidden + 1) * nout;
-        biasIH = Matrix.randomGaussian(1, nhidden).times(1 / Math.sqrt(nin + 1));
-        biasHO = Matrix.randomGaussian(1, nout).times(1 / Math.sqrt(nhidden + 1));
-        output = new double[nout];
-        deltaO = new double[nout];
-        hidden = new double[nhidden];
-        deltaH = new double[nhidden];
-        input = new double[nin];
+        this.nout    = nout;
+        weightIH     = Matrix.randomGaussian(nin, nhidden);
+        weightHO     = Matrix.randomGaussian(nhidden, nout);
+        nwts         = (nin + 1) * nhidden + (nhidden + 1) * nout;
+        biasIH       = Matrix.randomGaussian(1, nhidden).times(1 / Math.sqrt(nin + 1));
+        biasHO       = Matrix.randomGaussian(1, nout).times(1 / Math.sqrt(nhidden + 1));
+        output       = new double[nout];
+        deltaO       = new double[nout];
+        hidden       = new double[nhidden];
+        deltaH       = new double[nhidden];
+        input        = new double[nin];
     }
 
     public double[] getOutput() {
         return output;
     }
+
     public abstract Matrix feedForward(Matrix input);
+
     public abstract double calcError(Matrix input, Matrix target);
+
     public void setHidden(double[] hidden) {
         this.hidden = hidden;
     }

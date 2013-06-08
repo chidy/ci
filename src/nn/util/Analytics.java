@@ -1,9 +1,9 @@
+
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
  */
 package nn.util;
-
 
 /**
  * Class for analysing performance of models
@@ -12,13 +12,12 @@ package nn.util;
  * @author Chidi
  */
 public class Analytics {
-
     private double[] output, target, rw;
-    private double iorw;
-    private double rmse;
-    private double mse;
-    private double sse;
-    private double rwRMSE;
+    private double   iorw;
+    private double   rmse;
+    private double   mse;
+    private double   sse;
+    private double   rwRMSE;
 
     /**
      * Constructor for <code>Analytics</code> class
@@ -28,9 +27,9 @@ public class Analytics {
     public Analytics(double[] output, double[] target) {
         this.output = output;
         this.target = target;
-        rmse = CostFunction.rootMeanSquaredError(output, target);
-        sse = CostFunction.sumSquaredError(output, target);
-        mse = CostFunction.meanSquaredError(output, target);
+        rmse        = CostFunction.rootMeanSquaredError(output, target);
+        sse         = CostFunction.sumSquaredError(output, target);
+        mse         = CostFunction.meanSquaredError(output, target);
     }
 
     /**
@@ -50,7 +49,7 @@ public class Analytics {
      */
     private void calcIORW() {
         rwRMSE = CostFunction.rootMeanSquaredError(rw, target);
-        iorw = (rwRMSE - rmse) / rwRMSE;
+        iorw   = (rwRMSE - rmse) / rwRMSE;
     }
 
     /**
@@ -80,10 +79,13 @@ public class Analytics {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+
         sb.append("RMSE: ").append(rmse).append("\n");
         sb.append("MSE: ").append(mse).append("\n");
-        //sb.append("SSE: ").append(sse).append("\n");
+
+        // sb.append("SSE: ").append(sse).append("\n");
         sb.append("IORW: ").append(iorw).append("\n");
+
         return sb.toString();
     }
 }

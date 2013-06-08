@@ -5,5 +5,4 @@ package problems.discrete;
  * Date: 08/06/2013
  * Time: 17:52
  */
-public class Knapsack {
-}
+public class Knapsack {}

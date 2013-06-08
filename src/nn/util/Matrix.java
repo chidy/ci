@@ -1,12 +1,14 @@
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
  */
 package nn.util;
 
 //~--- JDK imports ------------------------------------------------------------
+
 import java.io.Serializable;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -15,9 +17,8 @@ import java.util.Random;
  * @author chidimuorah
  */
 public class Matrix implements Serializable {
-
-    private final int row;
-    private final int column;
+    private final int  row;
+    private final int  column;
     private double[][] data;
 
     /**
@@ -25,9 +26,10 @@ public class Matrix implements Serializable {
      * @param data data
      */
     public Matrix(double[][] data) {
-        row = data.length;
-        column = data[0].length;
+        row       = data.length;
+        column    = data[0].length;
         this.data = new double[row][column];
+
         for (int i = 0; i < row; i++) {
             System.arraycopy(data[i], 0, this.data[i], 0, column);
         }
@@ -43,9 +45,9 @@ public class Matrix implements Serializable {
      * @param column number of columns
      */
     public Matrix(int row, int column) {
-        this.row = row;
+        this.row    = row;
         this.column = column;
-        data = new double[row][column];
+        data        = new double[row][column];
     }
 
     /**
@@ -137,6 +139,7 @@ public class Matrix implements Serializable {
         if (b.rowLength() != rowLength()) {
             throw new RuntimeException("Matrices must have the same dimensions to be concatenated");
         }
+
         return new Matrix(concatAll(transpose().toArray(), b.transpose().toArray())).transpose();
     }
 
@@ -157,15 +160,19 @@ public class Matrix implements Serializable {
      */
     public static double[] concatAll(double[] first, double[]... rest) {
         int totalLength = first.length;
+
         for (double[] array : rest) {
             totalLength += array.length;
         }
+
         double[] result = Arrays.copyOf(first, totalLength);
-        int offset = first.length;
+        int      offset = first.length;
+
         for (double[] array : rest) {
             System.arraycopy(array, 0, result, offset, array.length);
             offset += array.length;
         }
+
         return result;
     }
 
@@ -176,7 +183,9 @@ public class Matrix implements Serializable {
      */
     public Matrix getRow(int n) {
         double[][] aRow = new double[1][data.length];
+
         aRow[0] = data[n];
+
         return new Matrix(aRow);
     }
 
@@ -231,6 +240,7 @@ public class Matrix implements Serializable {
                     someColumns[i][j] = data[i][j + m];
                 }
             }
+
             return new Matrix(someColumns);
         }
     }
@@ -244,7 +254,7 @@ public class Matrix implements Serializable {
      */
     public static Matrix randomGaussian(int row, int column) {
         Matrix result = new Matrix(row, column);
-        Random r = new Random();
+        Random r      = new Random();
 
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
@@ -287,6 +297,7 @@ public class Matrix implements Serializable {
      */
     private void swap(int i, int j) {
         double[] temp = data[i];
+
         data[i] = data[j];
         data[j] = temp;
     }
@@ -316,7 +327,8 @@ public class Matrix implements Serializable {
         Matrix x = this;
 
         if ((y.row != x.row) || (y.column != x.column)) {
-            throw new RuntimeException("Illegal matrix dimensions." + row + " X " + column + " + " + y.row + " X " + y.column);
+            throw new RuntimeException("Illegal matrix dimensions." + row + " X " + column + " + " + y.row + " X "
+                                       + y.column);
         }
 
         Matrix result = new Matrix(row, column);
@@ -339,7 +351,8 @@ public class Matrix implements Serializable {
         Matrix x = this;
 
         if ((y.row != x.row) || (y.column != x.column)) {
-            throw new RuntimeException("Illegal matrix dimensions." + row + " X " + column + " - " + y.row + " X " + y.column);
+            throw new RuntimeException("Illegal matrix dimensions." + row + " X " + column + " - " + y.row + " X "
+                                       + y.column);
         }
 
         Matrix result = new Matrix(row, column);
@@ -382,9 +395,12 @@ public class Matrix implements Serializable {
      * @return length
      */
     public int length() {
-        int rowLength = data.length;
+        int rowLength    = data.length;
         int columnLength = data[0].length;
-        int length = (rowLength > columnLength) ? rowLength : columnLength;
+        int length       = (rowLength > columnLength)
+                           ? rowLength
+                           : columnLength;
+
         return length;
     }
 
@@ -393,9 +409,10 @@ public class Matrix implements Serializable {
      * @return size
      */
     public int[] size() {
-        int rowLength = data.length;
-        int columnLength = data[0].length;
-        int[] size = {rowLength, columnLength};
+        int   rowLength    = data.length;
+        int   columnLength = data[0].length;
+        int[] size         = { rowLength, columnLength };
+
         return size;
     }
 
@@ -440,11 +457,13 @@ public class Matrix implements Serializable {
      */
     public Matrix times(double x) {
         Matrix result = new Matrix(row, column);
+
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 result.set(i, j, data[i][j] * x);
             }
         }
+
         return result;
     }
 
@@ -454,11 +473,13 @@ public class Matrix implements Serializable {
      */
     public Matrix tanh() {
         Matrix result = new Matrix(row, column);
+
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 result.set(i, j, Math.tanh(data[i][j]));
             }
         }
+
         return result;
     }
 
@@ -469,11 +490,13 @@ public class Matrix implements Serializable {
      */
     public Matrix power(int power) {
         Matrix result = new Matrix(row, column);
+
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 result.set(i, j, Math.pow(data[i][j], power));
             }
         }
+
         return result;
     }
 
@@ -483,11 +506,13 @@ public class Matrix implements Serializable {
      */
     public Matrix reciprocal() {
         Matrix result = new Matrix(row, column);
+
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 result.set(i, j, 1 / data[i][j]);
             }
         }
+
         return result;
     }
 
@@ -498,6 +523,7 @@ public class Matrix implements Serializable {
      */
     public Matrix elemwiseTimes(Matrix y) {
         Matrix x = this;
+
         if ((y.row != x.row) || (y.column != x.column)) {
             throw new RuntimeException("Illegal matrix dimensions.");
         }
@@ -511,7 +537,6 @@ public class Matrix implements Serializable {
         }
 
         return result;
-
     }
 
     /**
@@ -521,6 +546,7 @@ public class Matrix implements Serializable {
      */
     public Matrix elemwisePlus(Matrix y) {
         Matrix x = this;
+
         if ((y.row != x.row) || (y.column != x.column)) {
             throw new RuntimeException("Illegal matrix dimensions.");
         }
@@ -534,7 +560,6 @@ public class Matrix implements Serializable {
         }
 
         return result;
-
     }
 
     /**
@@ -544,6 +569,7 @@ public class Matrix implements Serializable {
      */
     public Matrix elemwiseMinus(Matrix y) {
         Matrix x = this;
+
         if ((y.row != x.row) || (y.column != x.column)) {
             throw new RuntimeException("Illegal matrix dimensions.");
         }
@@ -557,7 +583,6 @@ public class Matrix implements Serializable {
         }
 
         return result;
-
     }
 
     /**
@@ -575,11 +600,13 @@ public class Matrix implements Serializable {
      */
     public Matrix eToNegativeElement() {
         Matrix result = new Matrix(row, column);
+
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 result.set(i, j, Math.pow(Math.E, -data[i][j]));
             }
         }
+
         return result;
     }
 
@@ -590,11 +617,13 @@ public class Matrix implements Serializable {
      */
     public Matrix plus(double x) {
         Matrix result = new Matrix(row, column);
+
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 result.set(i, j, data[i][j] + x);
             }
         }
+
         return result;
     }
 
@@ -604,13 +633,14 @@ public class Matrix implements Serializable {
      */
     public Matrix log() {
         Matrix result = new Matrix(row, column);
+
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 result.set(i, j, Math.log(data[i][j]));
             }
         }
-        return result;
 
+        return result;
     }
 
     /**
@@ -680,7 +710,6 @@ public class Matrix implements Serializable {
         return x;
     }
 
-    
     public double[][] toArray() {
         return data;
     }
@@ -700,10 +729,14 @@ public class Matrix implements Serializable {
      */
     public Matrix getColumns(int[] inDim) {
         Matrix result = null;
+
         for (int i = 0; i < inDim.length - 1; i++) {
             result = getColumn(inDim[i]).concat(getColumn(inDim[i + 1]));
         }
-        return inDim.length > 1 ? result : getColumn(inDim[0]);
+
+        return (inDim.length > 1)
+               ? result
+               : getColumn(inDim[0]);
     }
 
     /**
@@ -712,11 +745,13 @@ public class Matrix implements Serializable {
      */
     public Double[][] toObjectArray() {
         Double[][] result = new Double[data.length][data[0].length];
+
         for (int i = 0; i < result.length; i++) {
             for (int j = 0; j < result[0].length; j++) {
                 result[i][j] = data[i][j];
             }
         }
+
         return result;
     }
 
@@ -726,26 +761,31 @@ public class Matrix implements Serializable {
      */
     public double[] vectorise() {
         double[] result = getColumn(0).transpose().toArray()[0];
+
         if (column > 1) {
             for (int i = 1; i < column; i++) {
                 result = concatAll(result, getColumn(i).transpose().toArray()[0]);
             }
         }
+
         return result;
     }
 
-
     public static double[][] concatAll(double[][] first, double[][]... rest) {
         int totalLength = first.length;
+
         for (double[][] array : rest) {
             totalLength += array.length;
         }
+
         double[][] result = Arrays.copyOf(first, totalLength);
-        int offset = first.length;
+        int        offset = first.length;
+
         for (double[][] array : rest) {
             System.arraycopy(array, 0, result, offset, array.length);
             offset += array.length;
         }
+
         return result;
     }
 
@@ -770,7 +810,7 @@ public class Matrix implements Serializable {
 
     public static void main(String[] args) {
         double[][] d = {
-            {100, 2, 3}, {4, 5, 6}, {9, 1, 3}
+            { 100, 2, 3 }, { 4, 5, 6 }, { 9, 1, 3 }
         };
 
         /*
@@ -808,19 +848,22 @@ public class Matrix implements Serializable {
          * System.out.println(x.times(x));
          */
         Matrix D = new Matrix(d);
+
         System.out.println(D);
         System.out.println("------------------------------");
+
         double[] res = D.vectorise();
+
         System.out.println(D.append(D.getRow(0)));
-//        double[] v = D.vectorise();
-//        double[][] y = new double[1][v.length];
-//        y[0] = v;
-//        System.out.println(new Matrix(y));
+
+//      double[] v = D.vectorise();
+//      double[][] y = new double[1][v.length];
+//      y[0] = v;
+//      System.out.println(new Matrix(y));
         // System.out.println(D.getColumns(0, 0).pseudoInverse());
 
-        //System.out.println(D.elemwiseTimes(2));
-        //System.out.println(Math.log(100));
-        //System.out.println(D.getColumns(1, 1));
-
+        // System.out.println(D.elemwiseTimes(2));
+        // System.out.println(Math.log(100));
+        // System.out.println(D.getColumns(1, 1));
     }
 }

@@ -1,9 +1,11 @@
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
  */
 package nn.util;
+
+//~--- JDK imports ------------------------------------------------------------
 
 import java.util.ArrayList;
 
@@ -21,7 +23,7 @@ public class Stat {
      */
     public static Matrix var(Matrix x) {
         double temp;
-        Matrix mean = mean(x);
+        Matrix mean   = mean(x);
         Matrix result = new Matrix(x.toArray());
 
         // compute (x - x_bar)^2
@@ -47,6 +49,7 @@ public class Stat {
         for (int i = 0; i < result.columnLength(); i++) {
             result.set(0, i, Math.sqrt(result.get(0, i)));
         }
+
         return result;
     }
 
@@ -57,8 +60,8 @@ public class Stat {
      */
     public static Matrix normalise(Matrix x) {
         Matrix result = new Matrix(x.toArray());
-        Matrix mu = Stat.mean(x);
-        Matrix std = Stat.std(x);
+        Matrix mu     = Stat.mean(x);
+        Matrix std    = Stat.std(x);
         double val;
 
         for (int i = 0; i < x.columnLength(); i++) {
@@ -95,11 +98,12 @@ public class Stat {
      * @return mean of x
      */
     public static double mean(ArrayList<Double> x) {
-
         double sum = 0;
+
         for (Double n : x) {
             sum += n;
         }
+
         return sum / x.size();
     }
 
@@ -141,13 +145,13 @@ public class Stat {
 
             return result;
         } else {
-            int columns = x.columnLength();
-            Matrix column;
+            int        columns = x.columnLength();
+            Matrix     column;
             double[][] result = new double[1][columns];
 
             for (int j = 0; j < columns; j++) {
-                column = x.getColumn(j);
-                sum = sumColumn(column);
+                column       = x.getColumn(j);
+                sum          = sumColumn(column);
                 result[0][j] = sum;
             }
 
@@ -176,9 +180,11 @@ public class Stat {
      */
     public static double sum(double[] input) {
         double sum = 0;
+
         for (int i = 0; i < input.length; i++) {
             sum += input[i];
         }
+
         return sum;
     }
 
@@ -189,9 +195,11 @@ public class Stat {
      */
     public static double mean(double[] x) {
         double sum = 0;
+
         for (int i = 0; i < x.length; i++) {
             sum += x[i];
         }
+
         return sum / x.length;
     }
 
@@ -202,20 +210,21 @@ public class Stat {
      */
     public static double mean(Double[] x) {
         double sum = 0;
+
         for (int i = 0; i < x.length; i++) {
             sum += x[i];
         }
+
         return sum / x.length;
     }
 
     public static void main(String[] args) {
         double[][] d = {
-            {1, 2, 3}, {4, 5, 6}, {7, 8, 9}
+            { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }
         };
-        Matrix D = new Matrix(d);
+        Matrix     D = new Matrix(d);
 
         System.out.println(D);
         System.out.println(mean(D));
-
     }
 }

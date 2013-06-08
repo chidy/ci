@@ -12,8 +12,6 @@ public class SubsetSum extends AbstractSubsetProblem {
         this.problem = problem;
     }
 
-
-
     @Override
     public Integer evaluate(boolean[] aSolution) {
         int sum = 0;
@@ -52,5 +50,4 @@ public class SubsetSum extends AbstractSubsetProblem {
 
         return randomSolution;
     }
-
 }

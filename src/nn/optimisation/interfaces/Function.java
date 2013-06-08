@@ -1,5 +1,7 @@
 package nn.optimisation.interfaces;
 
+//~--- non-JDK imports --------------------------------------------------------
+
 import nn.util.Matrix;
 
 /**
@@ -11,7 +13,10 @@ import nn.util.Matrix;
  */
 public interface Function {
     public double calcError(Matrix input, Matrix target);
+
     public void backPropagate(Matrix input, Matrix deltas);
+
     public double[] getAllWeights();
-    public void setWeights(double [] weights);
+
+    public void setWeights(double[] weights);
 }

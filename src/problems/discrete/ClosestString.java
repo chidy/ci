@@ -5,5 +5,4 @@ package problems.discrete;
  * Date: 08/06/2013
  * Time: 17:53
  */
-public class ClosestString {
-}
+public class ClosestString {}
